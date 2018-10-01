@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "981947826780",
+    "firebase_url": "https://sealocations-206105.firebaseio.com",
+    "project_id": "sealocations-206105",
+    "storage_bucket": "sealocations-206105.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981947826780:android:8e46ede34c9bb10a",
+        "android_client_info": {
+          "package_name": "com.apps.fatima.sealocation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981947826780-6jir3qbum6cpv76pif97gmc91h3lirq9.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "981947826780-6jir3qbum6cpv76pif97gmc91h3lirq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmLUSovmTULWLcTb0Pev3M9z-9RnA3lzY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

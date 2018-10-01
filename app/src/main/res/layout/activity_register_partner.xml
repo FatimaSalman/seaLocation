@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/register_partner"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_left_arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/log_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/logo_user"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo_user" />
+
+            <TextView
+                android:id="@+id/select_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/log_img"
+                android:gravity="center"
+                android:text="@string/add_profile_image"
+                android:textColor="@color/colorRed" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_image"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/user_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="14sp">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernameEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/confirmPassword"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/cityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirmPasswordEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/cityTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ic_arrow"
+                    android:hint="@string/select_city"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ic_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_down" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/otherEnCityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cityLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:gravity="top"
+                android:hint="@string/write_city_en"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/otherArCityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otherEnCityEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border"
+                android:gravity="top"
+                android:hint="@string/write_city_ar"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/mobileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otherArCityEditText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_gray_border">
+
+                <TextView
+                    android:id="@+id/codeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/code_no"
+                    android:textColor="@color/colorBlack" />
+
+                <EditText
+                    android:id="@+id/mobileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/codeTxt"
+                    android:background="@null"
+                    android:hint="@string/mobile_number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/select_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileLayout"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/select_action_type"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/radioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_action"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/boatsRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/boatsRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/boatsRadioButton"
+                        android:text="@string/boats"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tanksRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/boatsRadioButtonLayout">
+
+                    <ImageView
+                        android:id="@+id/tanksRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/tanksRadioButton"
+                        android:text="@string/tanks"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/driversRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanksRadioButtonLayout">
+
+                    <ImageView
+                        android:id="@+id/driversRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/driversRadioButton"
+                        android:text="@string/drivers"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seaRequirementsRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/boatsRadioButtonLayout">
+
+                    <ImageView
+                        android:id="@+id/seaRequirementsRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/seaRequirementsRadioButton"
+                        android:text="@string/sea_requirements"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seaServicesRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seaRequirementsRadioButtonLayout"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/tanksRadioButtonLayout">
+
+                    <ImageView
+                        android:id="@+id/seaServicesRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/seaServicesRadioButton"
+                        android:text="@string/sea_services"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioLayout"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/boat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/boatTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/boats"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/boatNoEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/boatTitle"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/boat_number"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/boatNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boatNoEditText"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/boat_name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boatNameEditText"
+                        android:padding="10dp"
+                        android:text="@string/passengers_number" />
+
+                    <RelativeLayout
+                        android:id="@+id/counterLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt2"
+                        android:layout_marginBottom="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/plusLayout"
+                            android:layout_width="53dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/colorPrimaryDark">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/plus" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/passengersNoEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_toEndOf="@+id/plusLayout"
+                            android:layout_toStartOf="@+id/minusLayout"
+                            android:background="@drawable/bg_gray_square"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/_0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/minusLayout"
+                            android:layout_width="53dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/colorPrimaryDark">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/minus" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/areaLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counterLayout"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/widthLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/heightEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/areaHieghtTxt"
+                                android:background="@drawable/bg_gray_border"
+                                android:hint="@string/height"
+                                android:inputType="number"
+                                android:padding="10dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/areaHieghtTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="45dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/bg_gray_border"
+                                android:drawableEnd="@drawable/ic_arrow_down"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:hint="@string/select_unit"
+                                android:padding="5dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/widthLayout"
+                            android:layout_marginTop="10dp">
+
+                            <EditText
+                                android:id="@+id/widthEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/areaWidthTxt"
+                                android:background="@drawable/bg_gray_border"
+                                android:hint="@string/width"
+                                android:inputType="number"
+                                android:padding="10dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/areaWidthTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="45dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/bg_gray_border"
+                                android:drawableEnd="@drawable/ic_arrow_down"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:hint="@string/select_unit"
+                                android:padding="5dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/select_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/areaLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_location"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_location"
+                        android:layout_marginBottom="10dp">
+
+                        <EditText
+                            android:id="@+id/rentValueEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_gray_border"
+                            android:hint="@string/rent_value"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/Riyal"
+                            tools:ignore="RelativeOverlap" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tripTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rentLayout"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/trip_type"
+                        android:textColor="@color/colorDark"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/radioGroupLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tripTxt"
+                        android:layout_marginBottom="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/divingLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/divingRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/divingRadioButton"
+                                android:text="@string/diving"
+                                android:textColor="@color/colorGrayDark" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/fishingRadioButtonLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/divingLayout">
+
+                            <ImageView
+                                android:id="@+id/fishingRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/fishingRadioButton"
+                                android:text="@string/fishing"
+                                android:textColor="@color/colorGrayDark" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/picnicRadioButtonLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/fishingRadioButtonLayout">
+
+                            <ImageView
+                                android:id="@+id/picnicRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/picnicRadioButton"
+                                android:text="@string/picnic"
+                                android:textColor="@color/colorGrayDark" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expireDataLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/radioGroupLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/expireTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/expiry_date_boat" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expireDateLicenceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expireDataLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/expireLicenceTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/expiry_date_driving"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/licenceImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expireDateLicenceLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/licence_sea"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/licenceImage"
+                        android:visibility="gone"
+                        tools:ignore="TooManyViews">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_bg" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tanks_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/boat_layout"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    tools:ignore="TooManyViews">
+
+                    <TextView
+                        android:id="@+id/tanksTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/tanks"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        tools:ignore="TooManyViews" />
+
+                    <RelativeLayout
+                        android:id="@+id/tankTypeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tanksTitle"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tankTypeTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/ic_arrow5"
+                            android:hint="@string/tanks_type"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ic_arrow5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_arrow_down"
+                            tools:ignore="TooManyViews" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/otherEnTankTypeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tankTypeLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_tank_en"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/otherArTankTypeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherEnTankTypeEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_tank_ar"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherArTankTypeEditText"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/droidkufi_regular"
+                        android:text="@string/tanks_number" />
+
+                    <RelativeLayout
+                        android:id="@+id/counterTLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt5"
+                        android:layout_marginBottom="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/plusTLayout"
+                            android:layout_width="53dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/colorPrimaryDark">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/plus" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tanksNoEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_toEndOf="@+id/plusTLayout"
+                            android:layout_toStartOf="@+id/minusTLayout"
+                            android:background="@drawable/bg_gray_square"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/_0"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp"
+                            tools:ignore="LabelFor" />
+
+                        <RelativeLayout
+                            android:id="@+id/minusTLayout"
+                            android:layout_width="53dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/colorPrimaryDark">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/minus" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rentValueLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counterTLayout"
+                        android:layout_marginBottom="10dp">
+
+                        <EditText
+                            android:id="@+id/rentValueTanksEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_gray_border"
+                            android:hint="@string/rent_value_tank"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/Riyal"
+                            tools:ignore="RelativeOverlap" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/licenceTankImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rentValueLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/licence_sea"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageTankLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/licenceTankImage"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageViewTank"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_bg"
+                            tools:ignore="TooManyViews" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/select_location_tanks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageTankLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_location"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/expireDataTanksLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_location_tanks"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/expireTanksTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/expiry_date_driving" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/drivers_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tanks_layout"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    tools:ignore="TooManyViews">
+
+                    <TextView
+                        android:id="@+id/driversTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/drivers"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/driverNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/driversTitle"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/full_name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/licenceDrivingEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/driverNameEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/licence_driving"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/licenceLevelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/licenceDrivingEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="5dp"
+                        tools:ignore="TooManyViews">
+
+                        <TextView
+                            android:id="@+id/licenceLevelTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/ic_arrow6"
+                            android:hint="@string/licence_level"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ic_arrow6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_arrow_down" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/otherEnLicenceLevelEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/licenceLevelLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_Licence_en"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/otherArLicenceLevelEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherEnLicenceLevelEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_Licence_ar"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/companyLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherArLicenceLevelEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="5dp"
+                        tools:ignore="TooManyViews">
+
+                        <TextView
+                            android:id="@+id/companyTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/ic_arrow2"
+                            android:hint="@string/company_licence"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ic_arrow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_arrow_down" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/otherEnCompanyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/companyLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_company_name_en"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/otherArCompanyEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherEnCompanyEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_company_name_ar"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/divingType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherArCompanyEditText"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/diving_type"
+                        android:textColor="@color/colorDark"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/radioDivingLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divingType"
+                        android:layout_marginBottom="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/divingCLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/divingRadio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/divingRadio"
+                                android:text="@string/diving_cylinder"
+                                android:textColor="@color/colorGrayDark" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/freeRadioButtonLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/divingCLayout">
+
+                            <ImageView
+                                android:id="@+id/freeRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_circle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/freeRadioButton"
+                                android:text="@string/free_diving"
+                                android:textColor="@color/colorGrayDark" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/noteEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/radioDivingLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/note_diving"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/select_licence_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/noteEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_new_licence"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageNewLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_licence_new"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageViewNew"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_bg" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/select_location_driving"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageNewLayout"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_location"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/otherLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_location_driving"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/otherTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="@string/enter_info_for_other_diving"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/driverOtherNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/otherTitle"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:gravity="top"
+                            android:hint="@string/full_name"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/licenceDrivingOtherEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/driverOtherNameEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:hint="@string/licence_driving"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/licenceLevelOtherLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/licenceDrivingOtherEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:padding="5dp"
+                            tools:ignore="TooManyViews">
+
+                            <TextView
+                                android:id="@+id/licenceLevelOtherTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/ic_arrow_other6"
+                                android:hint="@string/licence_level"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_arrow_other6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_arrow_down" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/otherEnLicencetEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/licenceLevelOtherLayout"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:gravity="top"
+                            android:hint="@string/write_type_Licence_en"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/otherArLicencetEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/otherEnLicencetEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:gravity="top"
+                            android:hint="@string/write_type_Licence_ar"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/companyOtherLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/otherArLicencetEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:padding="5dp"
+                            tools:ignore="TooManyViews">
+
+                            <TextView
+                                android:id="@+id/companyOtherTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/ic_arrowOther2"
+                                android:hint="@string/company_licence"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_arrowOther2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_arrow_down" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/otherEnCompanyOtherEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/companyOtherLayout"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:gravity="top"
+                            android:hint="@string/write_company_name_en"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/otherArCompanyOtherEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/otherEnCompanyOtherEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:gravity="top"
+                            android:hint="@string/write_company_name_ar"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/select_licence_other_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/otherArCompanyOtherEditText"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_gray_border"
+                            android:hint="@string/select_new_licence"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/imageNewOtherLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/select_licence_other_new"
+                            android:layout_marginBottom="10dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imageViewOtherNew"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/top_bg" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/requirement_sea_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drivers_layout"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/requirementTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/sea_requirements"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/recordNoCommercialEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/requirementTitle"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/record_number_commercial"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/shopNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recordNoCommercialEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/shop_name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/shopDescribeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/shopNameEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/shop_describe"
+                        android:inputType="textImeMultiLine"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/attachImageTxt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shopDescribeEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/attach_record_image"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageRecordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/attachImageTxt1"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageRecordNew"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_bg" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/select_location_requirement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageRecordLayout"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_location"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/services_sea_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/requirement_sea_layout"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/serviceTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/sea_services"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/activityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/serviceTitle"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/activityTypeTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/ic_arrow1"
+                            android:hint="@string/select_activity_type"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/ic_arrow1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_arrow_down" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/otherEnEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activityLayout"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_activity_en"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/otherArEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherEnEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/write_type_activity_ar"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/describeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/otherArEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:gravity="top"
+                        android:hint="@string/activity_describe"
+                        android:inputType="textImeMultiLine"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/recordNoEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/describeEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/record_number"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/attachImageTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recordNoEditText"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/attach_record_image"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/imageRecordLayout_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/attachImageTxt"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageRecordNew_"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top_bg" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/select_location_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageRecordLayout_"
+                        android:background="@drawable/bg_gray_border"
+                        android:hint="@string/select_location"
+                        android:padding="10dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/agreeLicenseCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contentLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/agree_licence"
+                android:textColor="@color/colorDark" />
+
+            <Button
+                android:id="@+id/approveBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agreeLicenseCheckBox"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/button_bg"
+                android:padding="10dp"
+                android:text="@string/aprove_register"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

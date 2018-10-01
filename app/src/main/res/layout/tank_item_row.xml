@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayBg"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ic_arrow_down">
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/tanks_type_"
+                android:textColor="@color/colorDark" />
+
+            <TextView
+                android:id="@+id/tank_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/txt"
+                android:text="@string/tanks_type"
+                android:textColor="@color/colorDark" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ic_arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_down_list" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/valueLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:background="@color/colorGrayText"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/detailsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/ic_delete">
+
+            <TextView
+                android:id="@+id/tanks_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/tanks_number"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tanks_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tanks_txt"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/rant_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanks_number"
+                android:padding="10dp"
+                android:text="@string/rent_value"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/rant_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanks_number"
+                android:layout_toEndOf="@+id/rant_txt"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanks_number"
+                android:layout_toEndOf="@+id/rant_value"
+                android:padding="10dp"
+                android:text="@string/Riyal"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnRequest"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/detailsLayout"
+            android:background="@color/colorGreen"
+            android:text="@string/reserve"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/ic_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/ic_edit"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/ic_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_edit" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BoatsOtherActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/droidkufi_regular"
+                android:text="@string/add_jetSki"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_left_arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_marginTop="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/tanks_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tanksTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/droidkufi_regular"
+                android:gravity="center"
+                android:text="@string/tanks"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/tankTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanksTitle"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tankTypeTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ic_arrow5"
+                    android:hint="@string/tanks_type"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ic_arrow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_down"
+                    tools:ignore="TooManyViews" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tankTypeLayout"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/droidkufi_regular"
+                android:text="@string/tanks_number" />
+
+            <RelativeLayout
+                android:id="@+id/counterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt2"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/plusLayout"
+                    android:layout_width="53dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/colorPrimaryDark">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/plus" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tanksNoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_toEndOf="@+id/plusLayout"
+                    android:layout_toStartOf="@+id/minusLayout"
+                    android:background="@drawable/bg_gray_square"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor" />
+
+                <RelativeLayout
+                    android:id="@+id/minusLayout"
+                    android:layout_width="53dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/colorPrimaryDark">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/minus" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rentValueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/counterLayout"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/rentValueTanksEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_border"
+                    android:hint="@string/rent_value_tank"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/Riyal"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/licenceTankImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rentValueLayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/licence_sea"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/imageTankLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/licenceTankImage"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageViewTank"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/top_bg"
+                    tools:ignore="TooManyViews" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/select_location_tanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageTankLayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/select_location"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/expireDataTanksLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_location_tanks"
+                android:background="@drawable/bg_gray_border"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/expireTanksTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/expiry_date_driving" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/approveBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expireDataTanksLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorGreen"
+                android:padding="10dp"
+                android:text="@string/approve"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

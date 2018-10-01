@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BoatsOtherActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/add_driver"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <RelativeLayout
+                android:id="@+id/backLayout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ic_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_left_arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/drivers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/driversTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/drivers"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/driverNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driversTitle"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:gravity="top"
+                android:hint="@string/full_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/licenceDrivingEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driverNameEditText"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/licence_driving"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/licenceLevelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/licenceDrivingEditText"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:padding="5dp"
+                tools:ignore="TooManyViews">
+
+                <TextView
+                    android:id="@+id/licenceLevelTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ic_arrow6"
+                    android:hint="@string/licence_level"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ic_arrow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_down" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/companyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/licenceLevelLayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:padding="5dp"
+                tools:ignore="TooManyViews">
+
+                <TextView
+                    android:id="@+id/companyTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ic_arrow2"
+                    android:hint="@string/company_licence"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ic_arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_arrow_down" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/divingType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/companyLayout"
+                android:layout_marginBottom="10dp"
+                android:text="@string/diving_type"
+                android:textColor="@color/colorDark"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/radioDivingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divingType"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/divingCLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/divingRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/divingRadio"
+                        android:text="@string/diving_cylinder"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/freeRadioButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/divingCLayout">
+
+                    <ImageView
+                        android:id="@+id/freeRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/freeRadioButton"
+                        android:text="@string/free_diving"
+                        android:textColor="@color/colorGrayDark" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/noteEditText"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@+id/radioDivingLayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:gravity="top"
+                android:hint="@string/note_diving"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/select_licence_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteEditText"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/select_new_licence"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/imageNewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_licence_new"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageViewNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/top_bg" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/select_location_driving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageNewLayout"
+                android:background="@drawable/bg_gray_border"
+                android:hint="@string/select_location"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/otherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_location_driving"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/otherTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/enter_info_for_other_diving"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/driverOtherNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/otherTitle"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_gray_border"
+                    android:gravity="top"
+                    android:hint="@string/full_name"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/licenceDrivingOtherEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/driverOtherNameEditText"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_gray_border"
+                    android:hint="@string/licence_driving"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/licenceLevelOtherLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/licenceDrivingOtherEditText"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_gray_border"
+                    android:padding="5dp"
+                    tools:ignore="TooManyViews">
+
+                    <TextView
+                        android:id="@+id/licenceLevelOtherTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ic_arrow_other6"
+                        android:hint="@string/licence_level"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ic_arrow_other6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_down" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/companyOtherLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/licenceLevelOtherLayout"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_gray_border"
+                    android:padding="5dp"
+                    tools:ignore="TooManyViews">
+
+                    <TextView
+                        android:id="@+id/companyOtherTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ic_arrowOther2"
+                        android:hint="@string/company_licence"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ic_arrowOther2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_down" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/select_licence_other_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/companyOtherLayout"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_gray_border"
+                    android:hint="@string/select_new_licence"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/imageNewOtherLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/select_licence_other_new"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageViewOtherNew"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/top_bg" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/approveBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otherLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorGreen"
+                android:padding="10dp"
+                android:text="@string/approve"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

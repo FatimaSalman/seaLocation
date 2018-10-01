@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.App.TextInputLayout" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/droidkufi_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Text" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/droidkufi_bold</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#AAB8C2</item>
+        <item name="colorControlActivated">#F5A623</item>
+    </style>
+
+    <style name="TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/droidkufi_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>
